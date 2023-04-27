@@ -1,0 +1,243 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&family=Koulen&family=Rubik:wght@400;500&family=Urbanist:wght@100;200;300;400;500;600&family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Quicksand:wght@300;400;500;600;700&family=Viga&display=swap");
+* {
+  
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: 0;
+  transition: all 0.5s ease;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: "Viga", sans-serif;
+  font-weight: 500;
+  overflow: hidden;
+}
+
+h1{
+  font-family: 'Courgette', cursive;
+  font-size: 2em;
+  width: auto;
+  text-align: center;
+  letter-spacing: 0.24em;
+  margin: 0;
+  animation:heart 3s infinite alternate; 
+  -webkit-animation:heart 4s infinite; 
+   color:#ffffff; 
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+body {
+    background-image: url("https://media.istockphoto.com/id/1385937023/vector/modern-dash-line-motion-background-abstract-design.jpg?s=612x612&w=0&k=20&c=h7ZkaLwN0aNfs45AtBHQH38MpDXL1bD7k4VTg_SP56g=");
+    background-size: cover;
+    height: 100%;
+    background-color: #ed1a1a;
+    box-sizing: border-box;
+}
+
+.container {
+  top: 20;
+  height: auto;
+  width: auto;
+  display: grid;
+  place-items: center;
+}
+
+.calculator {
+  position: relative;
+  height: auto;
+  width: auto;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 30px #000;
+  z-index: 90;
+}
+
+.theme-toggler {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 52;
+}
+
+.theme-toggler.active {
+  color: #333;
+}
+
+.theme-toggler.active::before {
+  background-color: #fff;
+}
+
+.theme-toggler::before {
+  content:"";
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: #333;
+  z-index: -51;
+}
+
+#display{
+  margin: 20px 0px ;
+  height: 145px;
+  width: auto;
+  max-width: 306px;
+  display: flex;
+  font-size: 36px;
+  line-height: 63px;
+  margin-bottom: 20px;
+  overflow-x: scroll;
+  overflow-wrap:normal;
+  align-items: flex-end;
+  flex-direction:column;
+  justify-content: flex-end;
+}
+
+#display::-webkit-scrollbar {
+  display: block;
+  height: 3px;
+  scroll-behavior: initial;
+}
+
+button {
+  height: 55px;
+  width: 55px;
+  border: 0;
+  border-radius: 30px;
+  margin: 4px;
+  font-size: 22px;
+  font-family: "Rubik", sans-serif;
+  cursor: pointer;
+  transition: all 200ms ease;
+  z-index: 51;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+button.btn-operator {
+  font-weight: 500;
+}
+
+button#backspace {
+  font-size: 1.5em;
+}
+
+button#\/ {
+  font-size: 1.6em;
+}
+
+button#\% {
+  font-weight: 600;
+  font-size: 1.15em;
+}
+
+button#plmn {
+  font-size: 1.5em;
+}
+
+button#equal {
+  font-size: 1.5em;
+  font-weight: 500;
+  height: 125px;
+} 
+
+.base {
+  position: relative;
+  top: 0.05em;
+  left: 4px;
+  font-weight: 400;
+  font-size: 1.05em;
+}
+
+.exponent {
+  position: relative;
+  bottom: 0.6em;
+  right: 0.1em;
+  font-size: 0.75em;
+}
+
+/* Light Theme >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+.calculator {
+  background-color: #fff;
+}
+
+.calculator #display {
+  color: #0a1e23;
+}
+
+.calculator button:active {
+  outline: #25252590 solid 1px;
+}
+
+.calculator button#clear,
+.calculator button#backspace {
+  background-color: #ffd0d3;
+  color: #e1202d;
+}
+
+.calculator button.btn-number {
+  background-color: #c3eaff;
+  color: #000000;
+}
+
+.calculator button.btn-operator {
+  background-color: rgb(144, 166, 209);
+  color: #333;
+}
+  
+.calculator button.btn-equal {
+  background-color: #69c175;
+  color: #000;
+}
+
+/* Dark Theme >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+.calculator.dark {
+  background-color: #071115;
+}
+
+.calculator.dark #display {
+  color: #0a82bd;
+}
+
+.calculator.dark button:active {
+  outline: #ffffff4b solid 1px;
+}
+
+.calculator.dark button#clear,
+.calculator.dark button#backspace {
+  background-color: #2d191e;
+  color: #bd3740;
+}
+
+.calculator.dark button.btn-number {
+  background-color: #1b2f38;
+  color: #f8fafb;
+}
+
+.calculator.dark button.btn-operator {
+  background-color: #2e1f39;
+  color: #aa00a4;
+}
+
+.calculator.dark button.btn-equal {
+  background-color: #22412c;
+  color: #fff;
+}
+
